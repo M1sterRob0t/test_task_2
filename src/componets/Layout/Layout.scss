@@ -1,0 +1,35 @@
+.layout {
+  box-sizing: border-box;
+  width: 954px;
+  height: 100vh;
+  padding: 41px 48px 49px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0 auto;
+}
+
+.layout__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #222222;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 16px;
+    background-image: url('./assets/arrorw.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+  }
+}

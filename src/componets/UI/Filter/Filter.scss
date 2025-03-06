@@ -1,0 +1,37 @@
+.filter {
+  position: relative;
+}
+
+.filter__input {
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  background-position: left 13px center;
+  border-radius: 15px;
+  padding: 15px 92px 15px 37px;
+
+  background-image: url('./assets/magnifying-glass-icon.svg');
+  background-repeat: no-repeat;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #474747;
+
+  &::placeholder {
+    color: #d1d1d1;
+  }
+}
+
+.filter__result {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #D1D1D1;
+}

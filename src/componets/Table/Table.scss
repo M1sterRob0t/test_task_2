@@ -1,0 +1,165 @@
+.table {
+  width: 100%;
+  max-height: 465px;
+  overflow-y: scroll;
+}
+
+.table__header {
+  display: flex;
+  justify-content: flex-start;
+
+  margin-bottom: 10px;
+}
+
+.table__column {
+  &:nth-child(1) {
+    width: 427px;
+  }
+
+  &:nth-child(2) {
+    width: 125px;
+  }
+
+  &:nth-child(3) {
+    width: 109px;
+  }
+
+  &:nth-child(4) {
+    width: 184px;
+  }
+
+  &:nth-child(5) {
+    width: 107px;
+  }
+}
+
+.table__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background-color: transparent;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #999999;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &--active::after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 4px;
+    background-image: url('./assets/arrow_top.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--active-desc::after {
+    background-image: url('./assets/arrow_bottom.svg');
+  }
+}
+
+.table__row:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.row {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  /* border-radius: 3px; */
+  background-color: #ffffff;
+  padding: 0 12px;
+  border-left: 4px solid transparent;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  user-select: none;
+  transition: 300ms linear;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &__red {
+    border-color: #E14165;
+  }
+
+  &__pink {
+    border-color: #C2C2FF;
+  }
+
+  &__violet {
+    border-color: #8686FF;
+  }
+}
+
+.row__cell {
+  &:nth-child(1) {
+    width: 427px;
+  }
+
+  &:nth-child(2) {
+    width: 125px;
+  }
+
+  &:nth-child(3) {
+    width: 109px;
+  }
+
+  &:nth-child(4) {
+    width: 184px;
+  }
+
+  &:nth-child(5) {
+    width: 107px;
+  }
+}
+
+.row__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #474747;
+}
+
+.row__type {
+  font-size: 12px;
+  font-weight: 400;
+  color: #5c5c5c;
+}
+
+.row__status {
+  font-size: 13px;
+  font-weight: 500;
+
+  &--online {
+    color: #1bda9d;
+  }
+
+  &--paused {
+    color: #ff8346;
+  }
+
+  &--draft {
+    color: #5c5c5c;
+  }
+
+  &--stopped {
+    color: #fe4848;
+  }
+}
+
+.row__site {
+  font-size: 12px;
+  font-weight: 400;
+  color: #5c5c5c;
+}
